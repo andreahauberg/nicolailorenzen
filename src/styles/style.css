@@ -1,0 +1,102 @@
+/* CUSTOM PROPERTIES */
+:root {
+    --primary-background-color:#F2EDE8;
+    --secondary-background-color:#EAE1D6;
+    --primary-text:#121212;
+    --secondary-text:#4A4A4A;
+    --primary-variant-color:#747474;
+    /* --border-radius: 0.5rem; */
+    --xxlg-size: 3rem;
+    --xlg-size: 1.4rem;
+    --lg-size: 1.4rem;
+    --md-size: 1.25rem;
+    --sm-size: 1.06rem;
+    --xsm-size: 0.93rem;
+    --xxsm-size: 0.75rem;
+}
+
+@media screen and (max-width: 768px) {
+  :root {
+    --xxlg-size: 2.5rem;
+    --xlg-size: 1.4rem;
+    --lg-size: 1.2rem;
+    --md-size: 1.1rem;
+    --sm-size: 1rem;
+    --xsm-size: 0.85rem;
+    --xxsm-size: 0.7rem;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  :root {
+    --xlg-size: 1.8rem;
+  }}
+
+
+
+@media screen and (min-width: 1600px) {
+    :root {
+        --xxlg-size: 4cqw;
+        --xlg-size:2cqw;
+        --lg-size: 1.6cqw;
+        --md-size: 1.4cqw;
+        --sm-size: 1.2cqw;
+        --xsm-size: 1cqw;
+        --xxsm-size: 0.9cqw;
+        --border-radius:0.6rem;
+      }
+}
+
+@font-face{
+    font-family: ViceCitySans;
+    src: url(ViceCitySans.ttf);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  img {
+    width: 100%;
+    height: auto;
+  }
+
+  li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+h1, h2 {
+    font-family: ViceCitySans;
+    color: var(--primary-text);
+}
+
+p, a{
+    font-family: monospace;
+}
+
+p{
+    font-size: var(--md-size);
+    color: var(--secondary-text);
+}
+
+a{
+    font-size: var(--lg-size);
+    color: var(--primary-text);
+}
+
+li:hover{
+    text-decoration: underline;
+}
+
+h1{
+    font-size: var(--xxlg-size);
+}
+h2{
+    font-size: var(--xlg-size);
+}

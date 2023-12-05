@@ -3,68 +3,137 @@
 ---
 
 <nav>
-  <ul class="nav_menu">
-    <li><a href="/#">About</a></li>
-    <li><a href="/#">Contact</a></li>
+  <ul>
+    <div class="grid">
+      <li>
+        <a href="#">About</a>
+      </li>
+      <li>
+        <a href="#">Book</a>
+      </li>
+    </div>
+    <li class="work" id="workItem">
+      <div class="fold" id="foldContainer">
+        <a href="#">Work</a>
+        <img src="/fold_icon.svg" alt="folding icon" />
+      </div>
+      <ul>
+        <a href="#">Portraits</a>
+        <a href="#">Weddings</a>
+        <a href="#">Cowboys</a>
+        <a href="#">Texas</a>
+        <a href="#">Mike's House</a>
+        <a href="#">Business</a>
+      </ul>
+    </li>
   </ul>
 </nav>
 
 <style>
-  /* NAVIGATIONSMENU */
-  li {
-    list-style: none;
+  img {
+    width: 20%;
   }
-
-  a {
-    text-decoration: none;
-    /* color: var(--primary-color);
-    font-size: var(--xlg-size); */
-  }
-  a:hover {
-    /* color: var(--hover-color); */
-    transition: 0.7s ease;
-  }
-
   nav {
-    min-height: 70px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: start;
-    border: solid;
-    border-color: var(--primary-text);
+    padding: 15px;
+    text-align: center;
+    border: 2px solid var(--primary-text);
   }
 
-  .nav_menu {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: end;
-    gap: 1.5em;
-    /* font-size: var(--h2-size); */
-    margin-top: 1.6em;
+  nav a {
+    padding: 15px;
+    display: inline-block;
+    position: relative;
   }
 
-  @media (max-width: 768px) {
-    nav {
-      align-items: end;
-      padding: 0 24px;
-      margin-top: 1.3em;
+  .grid::after {
+    content: "";
+    position: absolute;
+    height: 84px;
+    border-right: 2px solid var(--primary-text);
+    top: -15px;
+    right: 0;
+  }
+  @media (min-width: 768px) {
+    .grid::after {
+      height: 86px;
     }
-    .nav_menu {
-      margin-top: 0.9em;
-    }
-    /* a {
-      color: var(--secondary-text);
-      font-size: var(--xxlg-size);
-    } */
-    a:hover {
-      /* color: var(--primary-color); */
-      transition: 0.7s ease;
-    }
+  }
 
-    li {
-      padding: 0.3em;
+  nav li {
+    position: relative;
+  }
+
+  nav li:first-child a::after {
+    border: none;
+  }
+
+  nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: nowrap;
+  }
+
+  nav ul ul {
+    display: none;
+    position: absolute;
+    top: 128%;
+    left: 17px;
+    border: 2px solid var(--primary-text);
+  }
+  @media (min-width: 500px) {
+    nav ul ul {
+      top: 128%;
+      left: -114px;
+      width: 300px;
     }
+  }
+
+  nav li:last-child a::after {
+    border: none;
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    position: relative;
+    left: -50px;
+    gap: 2em;
+  }
+
+  @media (min-width: 768px) {
+    .grid {
+      grid-template-columns: 1fr 1fr 1fr;
+      position: relative;
+      left: -80px;
+      gap: 3em;
+    }
+  }
+
+  .work {
+    position: relative;
+    left: -10px;
+  }
+  .fold {
+    display: flex;
+  }
+  .fold.clicked img {
+    rotate: 180deg;
   }
 </style>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    var workItem = document.getElementById("workItem");
+    var foldContainer = document.getElementById("foldContainer");
+    var submenu = workItem.querySelector("ul");
+
+    workItem.addEventListener("click", function () {
+      submenu.style.display =
+        submenu.style.display === "block" ? "none" : "block";
+      foldContainer.classList.toggle("clicked"); // Toggle the "clicked" class on the fold container
+    });
+  });
+</script>

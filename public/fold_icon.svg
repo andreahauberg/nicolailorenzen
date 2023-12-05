@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" width="12" height="7.41" viewBox="0 0 12 7.41">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #131313;
+        stroke-width: 0px;
+      }
+    </style>
+  </defs>
+  <path id="ic_expand_less_24px" data-name="ic expand less 24px" class="cls-1" d="m6,0L0,6l1.41,1.41L6,2.83l4.59,4.58,1.41-1.41L6,0Z"/>
+</svg>

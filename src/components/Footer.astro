@@ -3,38 +3,44 @@
 ---
 
 <footer>
-  <!-- <div class="hero">
-        <a href="/#" class="nav_hero">
-          <img src="/hero.svg" alt="Nicolai Lorenzen" />
-        </a>
-      </div> -->
-  <div class="streg">
-    <hr />
-  </div>
   <div id="footer">
-    <p>(45) 2855 2278</p>
-    <div class="logo">
-      <a href="/#" class="foot_logo">
-        <img src="/logo.svg" alt="Nicolai Lorenzen lightning logo" />
-      </a>
-    </div>
-    <p>yello@nicolailorenzen.com</p>
+    <a href="/#">Instagram</a>
+    <a href="/#">yello@nicolailorenzen.com</a>
+    <a href="/#">Facebook</a>
+    <a href="/#">+45 28552278</a>
+    <a href="/#">Linkdin</a>
   </div>
-  <div class="streg">
-    <hr />
+  <div class="copy">
+    <p>NICOLAI LORENZEN &copy;</p>
   </div>
 </footer>
 
 <style>
+  footer {
+    border: solid 2px var(--primary-text);
+  }
   #footer {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    justify-items: center;
-    align-items: center;
+    grid-template-columns: 1fr 1fr;
   }
-  @media (max-width: 768px) {
+  /* @media (max-width: 768px) {
     #footer {
       grid-template-columns: 1fr;
     }
+  } */
+
+  a {
+    padding: 10px;
+    font-size: var(--sm-size);
+    color: var(--secondary-text);
+  }
+
+  .copy {
+    text-align: center;
+    padding: 1em;
+  }
+  p {
+    font-family: ViceCitySans;
+    color: var(--primary-variant-color);
   }
 </style>

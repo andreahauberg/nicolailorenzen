@@ -2,7 +2,7 @@
 import Category from "../components/Category.astro";
 import MainLayout from "../layouts/MainLayout.astro";
 const data = await fetch(
-  "https://zrqwsjrdghmwozsehhqi.supabase.co/rest/v1/portraits",
+  "https://zrqwsjrdghmwozsehhqi.supabase.co/rest/v1/weddings",
   {
     method: "GET",
     headers: {
@@ -13,15 +13,14 @@ const data = await fetch(
 ).then((res) => res.json());
 ---
 
-<MainLayout title="Nicolai Lorenzen">
-  <h1>PORTRAITS</h1>
+<MainLayout title="Business">
+  <h1>WEDDINGS</h1>
   {
     data.map((category) => {
       return <Category data={category} />;
     })
   }
 </MainLayout>
-
 <style>
   h1 {
     padding-top: 1em;

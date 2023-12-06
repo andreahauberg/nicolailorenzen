@@ -1,0 +1,35 @@
+---
+const { data } = Astro.props;
+console.log(data);
+---
+
+<article>
+  <img src={data.image} alt="" />
+  <h2>{data.name}</h2>
+</article>
+
+<style>
+  img {
+    width: 100%;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  @media (min-width: 768px) {
+    img {
+      width: 50%;
+      padding-left: 1rem;
+      padding-right: 1rem;
+    }
+  }
+
+  article {
+    display: flex;
+    margin-bottom: 2rem;
+    padding: 1rem;
+  }
+
+  /* Alternating alignment */
+  article:nth-child(even) {
+    flex-direction: row-reverse;
+  }
+</style>

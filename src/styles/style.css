@@ -72,15 +72,16 @@ a {
     text-decoration: none;
 }
 
-h1, h2 {
+h1{
     font-family: ViceCitySans;
     color: var(--primary-text);
-}
-h1{
     font-size: var(--xxlg-size);
 }
-h2{
-    font-size: var(--xlg-size);
+h2{    
+  font-family: monospace;
+  color: var(--primary-text);
+    font-size: var(--lg-size);
+    font-weight: lighter;
 }
 h3{
   font-family: monospace;

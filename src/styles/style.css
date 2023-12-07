@@ -58,7 +58,7 @@
     box-sizing: border-box;
   }
 
-  body{
+  body, main{
     background-color: var(--primary-background-color);
   }
 

@@ -2,4 +2,103 @@
 import SecondaryLayout from "../layouts/SecondaryLayout.astro";
 ---
 
-<SecondaryLayout title="About" />
+<SecondaryLayout title="About">
+  <section>
+    <div class="about">
+      <h1>ABOUT</h1>
+      <p class="about_text">
+        Nicolai, a Copenhagen-based freelance photographer, captures authentic
+        moments with a natural and homogeneous style, skillfully blending
+        innovative compositions with traditional and edgy approaches.
+      </p>
+      <div class="experience_2">
+        <h2>EXPERIENCE</h2>
+        <h3>Denmark's School of Media and Journalism (DMJX)</h3>
+        <p>Photojournalism, 2003-2007</p>
+        <h3>Photojournalist</h3>
+        <p>Dagbladet Børsen Jyllands-Posten, since 2007</p>
+        <h3>Editorials</h3>
+        <p>VICE Magazine, 2016</p>
+      </div>
+    </div>
+    <div class="img">
+      <img
+        src="/nicolai_selfportrait.webp"
+        alt="Nicolai Lorenzen selfportrait"
+      />
+    </div>
+    <div class="experience">
+      <h2>EXPERIENCE</h2>
+      <h3>Denmark's School of Media and Journalism (DMJX)</h3>
+      <p>Photojournalism, 2003-2007</p>
+      <h3>Photojournalist</h3>
+      <p>Dagbladet Børsen Jyllands-Posten, since 2007</p>
+      <h3>Editorials</h3>
+      <p>VICE Magazine, 2016</p>
+    </div>
+  </section>
+</SecondaryLayout>
+
+<style>
+  @media (min-width: 900px) {
+    section {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+  img {
+    width: 100%;
+    padding-right: 2rem;
+    padding-left: 2rem;
+  }
+  @media (min-width: 900px) {
+    .img {
+      display: flex;
+      justify-content: center;
+      order: -1;
+    }
+    img {
+      width: 100%;
+      padding-top: 2rem;
+      padding-bottom: 6rem;
+    }
+  }
+  h1 {
+    padding-bottom: 0.5rem;
+  }
+  h2 {
+    font-size: var(--xxlg-size);
+  }
+  h3 {
+    padding-bottom: 0.5rem;
+    padding-top: 1rem;
+  }
+
+  .about_text {
+    line-height: 2.5ch;
+  }
+
+  .about {
+    padding-top: 2rem;
+    padding-bottom: 3rem;
+    padding-left: 0.5rem;
+  }
+
+  .experience,
+  .experience_2 {
+    padding-top: 2rem;
+    padding-bottom: 4rem;
+    padding-left: 0.5rem;
+  }
+  .experience_2 {
+    display: none;
+  }
+  @media (min-width: 900px) {
+    .experience {
+      display: none;
+    }
+    .experience_2 {
+      display: block;
+    }
+  }
+</style>

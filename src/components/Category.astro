@@ -4,10 +4,10 @@ console.log(data);
 ---
 
 <article>
-  <div class="content">
+  <figure class="content">
     <img src={data.image} alt="" />
-    <h2>{data.name}</h2>
-  </div>
+    <figcaption>{data.name}</figcaption>
+  </figure>
 </article>
 
 <style>
@@ -28,6 +28,13 @@ console.log(data);
 
   img {
     width: 80%;
+  }
+
+  figcaption {
+    font-family: monospace;
+    color: var(--primary-text);
+    font-size: var(--lg-size);
+    font-weight: lighter;
   }
 
   @media (min-width: 768px) {

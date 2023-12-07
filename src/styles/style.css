@@ -78,7 +78,7 @@ h1{
     font-size: var(--xxlg-size);
 }
 h2{    
-  font-family: monospace;
+  font-family: ViceCitySans;
   color: var(--primary-text);
     font-size: var(--lg-size);
     font-weight: lighter;
@@ -86,6 +86,7 @@ h2{
 h3{
   font-family: monospace;
   color: var(--primary-text);
+  font-size: var(--lg-size);
   font-weight: bold;
 }
 
@@ -96,6 +97,7 @@ p, a{
 p{
     font-size: var(--md-size);
     color: var(--secondary-text);
+    max-width: 52ch;
 }
 
 a{

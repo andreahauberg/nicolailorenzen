@@ -54,8 +54,19 @@ import SecondaryLayout from "../layouts/SecondaryLayout.astro";
     section {
       display: grid;
       grid-template-columns: 1fr 1fr;
+      grid-template-areas: "contact prices";
+      gap: 2rem;
+    }
+
+    .contact {
+      grid-area: prices;
+    }
+
+    .prices {
+      grid-area: contact;
     }
   }
+
   h1 {
     padding-bottom: 0.5rem;
   }
@@ -75,7 +86,7 @@ import SecondaryLayout from "../layouts/SecondaryLayout.astro";
   form {
     width: 80%;
     max-width: 100%;
-    padding: 20px;
+    padding: 20px 20px 20px 0;
   }
 
   input,
@@ -87,6 +98,7 @@ import SecondaryLayout from "../layouts/SecondaryLayout.astro";
     font-family: monospace;
     border: solid 1px var(--secondary-text);
     background-color: white;
+    font-size: var(--sm-size);
   }
   button {
     font-family: monospace;
@@ -95,6 +107,7 @@ import SecondaryLayout from "../layouts/SecondaryLayout.astro";
     padding: 8px 15px;
     border: solid 1px var(--secondary-text);
     cursor: pointer;
+    font-size: var(--sm-size);
   }
   button:hover {
     background-color: white;

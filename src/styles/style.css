@@ -71,10 +71,6 @@
     list-style: none;
 }
 
-a {
-    text-decoration: none;
-}
-
 h1{
     font-family: ViceCitySans;
     color: var(--primary-text);
@@ -107,11 +103,10 @@ p{
 a{
     font-size: var(--lg-size);
     color: var(--primary-text);
+    text-decoration: none;
 }
 
-a:hover{
-    text-decoration: underline;
-}
+
 
 #scroll-to-top {
   position: fixed;

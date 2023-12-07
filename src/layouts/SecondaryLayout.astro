@@ -1,0 +1,135 @@
+---
+import "../styles/style.css";
+const { title } = Astro.props;
+import Footer from "../components/Footer.astro";
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/logo.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+  </head>
+  <body>
+    <header>
+      <div>
+        <h1>
+          <a class="nico" href="/">NICOLAI LORENZEN</a>
+        </h1>
+      </div>
+      <nav>
+        <ul>
+          <div class="grid">
+            <li>
+              <a href="/about">About</a>
+            </li>
+            <li>
+              <a href="/book">Book</a>
+            </li>
+          </div>
+          <li class="home">
+            <a href="/">Home</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <slot />
+    </main>
+    <Footer />
+  </body>
+</html>
+<style>
+  .nico {
+    display: flex;
+    justify-content: center;
+    font-size: 8cqw;
+    text-decoration: none;
+  }
+  nav {
+    padding: 15px;
+    text-align: center;
+    border: 2px solid var(--primary-text);
+  }
+
+  nav a {
+    padding: 15px;
+    display: inline-block;
+    position: relative;
+  }
+
+  .grid::after {
+    content: "";
+    position: absolute;
+    height: 84px;
+    border-right: 2px solid var(--primary-text);
+    top: -15px;
+    right: 0;
+  }
+  @media (min-width: 768px) {
+    .grid::after {
+      height: 86px;
+    }
+  }
+
+  nav li {
+    position: relative;
+  }
+
+  nav li:first-child a::after {
+    border: none;
+  }
+
+  nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: nowrap;
+  }
+
+  nav ul ul {
+    display: none;
+    position: absolute;
+    top: 128%;
+    left: 17px;
+    border: 2px solid var(--primary-text);
+  }
+  @media (min-width: 500px) {
+    nav ul ul {
+      top: 128%;
+      left: -114px;
+      width: 300px;
+    }
+  }
+
+  nav li:last-child a::after {
+    border: none;
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    position: relative;
+    left: -50px;
+    gap: 2em;
+  }
+
+  @media (min-width: 768px) {
+    .grid {
+      grid-template-columns: 1fr 1fr 1fr;
+      position: relative;
+      left: -80px;
+      gap: 3em;
+    }
+  }
+
+  .home {
+    position: relative;
+    left: -10px;
+  }
+</style>

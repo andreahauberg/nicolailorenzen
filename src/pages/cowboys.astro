@@ -13,7 +13,7 @@ const data = await fetch(
 ).then((res) => res.json());
 ---
 
-<MainLayout title="Business">
+<MainLayout title="Cowboys">
   <h1>COWBOYS</h1>
   {
     data.map((category) => {
@@ -25,5 +25,6 @@ const data = await fetch(
   h1 {
     padding-top: 1em;
     padding-bottom: 1em;
+    margin-left: 0.5rem;
   }
 </style>

@@ -2,4 +2,109 @@
 import SecondaryLayout from "../layouts/SecondaryLayout.astro";
 ---
 
-<SecondaryLayout title="Book" />
+<SecondaryLayout title="Book">
+  <section>
+    <div class="contact">
+      <h1>CONTACT</h1>
+      <p>Regarding any and all enquiries, please don't hesitate to contact.</p>
+      <form action="#" method="post">
+        <input type="text" id="name" name="name" placeholder="Name*" required />
+        <input
+          type="email"
+          id="email"
+          name="email"
+          placeholder="E-mail*"
+          required
+        />
+        <textarea
+          id="message"
+          name="message"
+          rows="8"
+          placeholder="Message*"
+          required></textarea>
+
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+    <div class="prices">
+      <h2>PRICES</h2>
+      <p class="price_item">
+        These are standard prices. Please contact me for other packages.
+      </p>
+      <p class="price_item">
+        <b>1 Portrait,</b> including retouch for SoMe and website: DKK 1.500.
+      </p>
+      <p class="price_item">
+        <b>2 Portraits,</b> including editing for website/press: DKK 3.850.
+      </p>
+      <p class="price_item">
+        <b>3 Portraits,</b> and a small film, including retouch and
+        post-production: DKK 6.500.
+      </p>
+      <p class="price_item">
+        Wedding ceremony and a small film, including retouch and
+        post-production: DKK 7.200.
+      </p>
+    </div>
+  </section>
+</SecondaryLayout>
+
+<style>
+  @media (min-width: 900px) {
+    section {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+  h1 {
+    padding-bottom: 0.5rem;
+  }
+  h2 {
+    font-size: var(--xxlg-size);
+    padding-bottom: 0.5rem;
+  }
+
+  .contact,
+  .prices {
+    padding-top: 2rem;
+    padding-left: 0.5rem;
+  }
+  .prices {
+    padding-bottom: 2rem;
+  }
+  form {
+    width: 80%;
+    max-width: 100%;
+    padding: 20px;
+  }
+
+  input,
+  textarea {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 16px;
+    box-sizing: border-box;
+    font-family: monospace;
+    border: solid 1px var(--secondary-text);
+    background-color: white;
+  }
+  button {
+    font-family: monospace;
+    background-color: var(--secondary-text);
+    color: white;
+    padding: 8px 15px;
+    border: solid 1px var(--secondary-text);
+    cursor: pointer;
+  }
+  button:hover {
+    background-color: white;
+    color: var(--secondary-text);
+  }
+  .price_item,
+  p {
+    line-height: 2.5ch;
+  }
+  .price_item {
+    padding-bottom: 1.5rem;
+  }
+</style>

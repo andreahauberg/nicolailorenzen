@@ -76,6 +76,7 @@ h1{
     font-family: ViceCitySans;
     color: var(--primary-text);
     font-size: var(--xxlg-size);
+    font-weight: lighter;
 }
 h2{    
   font-family: ViceCitySans;

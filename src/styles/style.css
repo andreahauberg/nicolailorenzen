@@ -56,6 +56,9 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+  }
+
+  body{
     background-color: var(--primary-background-color);
   }
 
@@ -118,6 +121,7 @@ a:hover{
   padding: 10px;
   border-radius: 5px;
   color: var(--primary-text);
+  background-color: var(--primary-background-color);
 }
 
 #scroll-to-top:hover{

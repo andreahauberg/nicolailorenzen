@@ -1,12 +1,12 @@
 ---
-import SecondaryLayout from "../layouts/SecondaryLayout.astro";
+import MainLayout from "../layouts/MainLayout.astro";
 ---
 
-<SecondaryLayout title="Book">
+<MainLayout title="Book">
   <section>
     <div class="contact">
       <h1>CONTACT</h1>
-      <p>Regarding any and all enquiries, please don't hesitate to contact.</p>
+      <p>Regarding any and all enquiries, please do not hesitate to contact.</p>
       <form action="#" method="post">
         <input type="text" id="name" name="name" placeholder="Name*" required />
         <input
@@ -28,26 +28,29 @@ import SecondaryLayout from "../layouts/SecondaryLayout.astro";
     </div>
     <div class="prices">
       <h2>PRICES</h2>
+      <!-- <p class="price_item">
+        These are standard prices. Regarding any and all enquiries, please don't
+        hesitate to contact.
+      </p> -->
       <p class="price_item">
-        These are standard prices. Please contact me for other packages.
+        <b>One Portrait</b>
+        <br /> Including retouch for SoMe and website: <br /> DKK 1.500.
       </p>
       <p class="price_item">
-        <b>1 Portrait,</b> including retouch for SoMe and website: DKK 1.500.
+        <b>Two Portraits</b>
+        <br /> Including editing for website/press: <br /> DKK 3.850.
       </p>
       <p class="price_item">
-        <b>2 Portraits,</b> including editing for website/press: DKK 3.850.
+        <b>Three Portraits and a small film</b>
+        <br /> Including retouch and post-production: <br /> DKK 6.500.
       </p>
       <p class="price_item">
-        <b>3 Portraits,</b> and a small film, including retouch and
-        post-production: DKK 6.500.
-      </p>
-      <p class="price_item">
-        Wedding ceremony and a small film, including retouch and
-        post-production: DKK 7.200.
+        <b>Wedding ceremony and a small film</b>
+        <br /> Including retouch and post-production: <br /> DKK 7.200.
       </p>
     </div>
   </section>
-</SecondaryLayout>
+</MainLayout>
 
 <style>
   @media (min-width: 900px) {
@@ -93,7 +96,7 @@ import SecondaryLayout from "../layouts/SecondaryLayout.astro";
   textarea {
     width: 100%;
     padding: 8px;
-    margin-bottom: 16px;
+    margin-bottom: 5%;
     box-sizing: border-box;
     font-family: monospace;
     border: solid 1px var(--secondary-text);

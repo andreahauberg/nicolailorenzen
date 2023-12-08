@@ -5,7 +5,6 @@
     --primary-text:#121212;
     --secondary-text:#4A4A4A;
     --primary-variant-color:#747474;
-    /* --border-radius: 0.5rem; */
     --xxlg-size: 3rem;
     --xlg-size: 1.4rem;
     --lg-size: 1.4rem;
@@ -13,6 +12,8 @@
     --sm-size: 1.06rem;
     --xsm-size: 0.93rem;
     --xxsm-size: 0.75rem;
+   --border-width: 2px;
+
 }
 
 @media screen and (max-width: 768px) {
@@ -32,6 +33,12 @@
     --xlg-size: 1.8rem;
   }}
 
+  @media screen and (min-width: 1400px) {
+    :root {
+        --border-width: 2.8px;
+      }
+}
+
 
 
 @media screen and (min-width: 1600px) {
@@ -44,7 +51,23 @@
         --xsm-size: 1cqw;
         --xxsm-size: 0.9cqw;
         --border-radius:0.6rem;
+        --border-width: 2.5px;
       }
+}
+@media screen and (min-width: 2200px) {
+  :root {
+      --border-width: 3.5px;
+    }
+}
+@media screen and (min-width: 2400px) {
+  :root {
+      --border-width: 4px;
+    }
+}
+@media screen and (min-width: 2800px) {
+  :root {
+      --border-width: 5px;
+    }
 }
 
 @font-face{
@@ -102,6 +125,7 @@ p{
     font-size: var(--md-size);
     color: var(--secondary-text);
     max-width: 52ch;
+    line-height: 3ch;
 }
 
 a{
@@ -117,10 +141,10 @@ a{
   bottom: 2%;
   right: 2%;
   cursor: pointer;
-  padding: 10px;
-  border-radius: 5px;
+  padding: 5px 10px 5px 10px ;
   color: var(--primary-text);
   background-color: var(--primary-background-color);
+border: solid var(--border-width) var(--primary-text);
 }
 
 #scroll-to-top:hover{

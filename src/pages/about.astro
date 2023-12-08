@@ -1,8 +1,8 @@
 ---
-import SecondaryLayout from "../layouts/SecondaryLayout.astro";
+import MainLayout from "../layouts/MainLayout.astro";
 ---
 
-<SecondaryLayout title="About">
+<MainLayout title="About">
   <section>
     <div class="about">
       <h1>ABOUT</h1>
@@ -37,7 +37,7 @@ import SecondaryLayout from "../layouts/SecondaryLayout.astro";
       <p>VICE Magazine, 2016</p>
     </div>
   </section>
-</SecondaryLayout>
+</MainLayout>
 
 <style>
   @media (min-width: 900px) {
@@ -47,18 +47,16 @@ import SecondaryLayout from "../layouts/SecondaryLayout.astro";
     }
   }
   img {
-    width: 100%;
-    padding-right: 2rem;
-    padding-left: 2rem;
+    width: 80%;
+    /* padding-right: 2rem;
+    padding-left: 2rem; */
   }
   @media (min-width: 900px) {
     .img {
-      display: flex;
-      justify-content: center;
       order: -1;
     }
     img {
-      width: 100%;
+      width: 70%;
       padding-top: 2rem;
       padding-bottom: 6rem;
     }
@@ -68,27 +66,32 @@ import SecondaryLayout from "../layouts/SecondaryLayout.astro";
   }
   h2 {
     font-size: var(--xxlg-size);
+    padding-top: 0.5rem;
   }
   h3 {
-    padding-bottom: 0.5rem;
+    /* padding-bottom: 0.5rem; */
     padding-top: 1rem;
   }
 
+  p {
+    padding-bottom: 0.5rem;
+  }
+
   .about_text {
-    line-height: 2.5ch;
+    line-height: 3ch;
   }
 
   .about {
     padding-top: 2rem;
-    padding-bottom: 3rem;
-    padding-left: 0.5rem;
+    padding-bottom: 2rem;
+    /* padding-left: 0.5rem; */
   }
 
   .experience,
   .experience_2 {
     padding-top: 2rem;
     padding-bottom: 4rem;
-    padding-left: 0.5rem;
+    /* padding-left: 0.5rem; */
   }
   .experience_2 {
     display: none;

@@ -73,6 +73,7 @@
 @font-face{
     font-family: ViceCitySans;
     src: url(ViceCitySans.ttf);
+    font-display: swap;
 }
 
 * {

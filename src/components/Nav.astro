@@ -3,16 +3,12 @@ const { data } = Astro.props;
 ---
 
 <nav>
-  <ul>
+  <div class="ul">
     <div class="grid">
-      <li>
-        <a class="xlg_size" href="/about">About</a>
-      </li>
-      <li class="book">
-        <a class="xlg_size" href="/book">Book</a>
-      </li>
+      <a class="xlg_size" href="/about">About</a>
+      <a id="book" class="xlg_size" href="/book">Book</a>
     </div>
-    <li id="workItem">
+    <div class="li" id="workItem">
       <div class="fold" id="foldContainer">
         <a class="xlg_size" id="work" href="#">Work</a>
         <img class="icon" src="/fold_icon.svg" alt="folding icon" />
@@ -25,8 +21,8 @@ const { data } = Astro.props;
         <a href="/mikeshouse">Mike's House</a>
         <a href="/business">Business</a>
       </ul>
-    </li>
-  </ul>
+    </div>
+  </div>
 </nav>
 
 <style>
@@ -74,7 +70,8 @@ const { data } = Astro.props;
     top: -10px;
     right: 0;
   }
-  nav li {
+  a,
+  .li {
     position: relative;
   }
 
@@ -82,14 +79,14 @@ const { data } = Astro.props;
     border: none;
   }
 
-  nav ul {
+  .ul {
     list-style: none;
     display: flex;
     justify-content: space-evenly;
     flex-wrap: nowrap;
   }
 
-  nav ul ul {
+  ul {
     display: none;
     position: absolute;
     right: -38%;
@@ -97,17 +94,17 @@ const { data } = Astro.props;
     border: solid var(--border-width) var(--primary-text);
   }
   @media (min-width: 450px) {
-    nav ul ul {
+    ul {
       right: -48%;
     }
   }
   @media (min-width: 500px) {
-    nav ul ul {
+    ul {
       right: -52%;
     }
   }
   @media (min-width: 600px) {
-    nav ul ul {
+    ul {
       right: -100%;
       width: 300%;
       top: 124%;
@@ -115,47 +112,47 @@ const { data } = Astro.props;
     }
   }
   @media (min-width: 800px) {
-    nav ul ul {
+    ul {
       top: 126%;
     }
   }
   @media (min-width: 900px) {
-    nav ul ul {
+    ul {
       top: 129%;
     }
   }
   @media (min-width: 1000px) {
-    nav ul ul {
+    ul {
       top: 132%;
     }
   }
   @media (min-width: 1100px) {
-    nav ul ul {
+    ul {
       top: 134%;
     }
   }
   @media (min-width: 1400px) {
-    nav ul ul {
+    ul {
       top: 146%;
     }
   }
   @media (min-width: 1800px) {
-    nav ul ul {
+    ul {
       top: 150%;
     }
   }
   @media (min-width: 2200px) {
-    nav ul ul {
+    ul {
       top: 140%;
     }
   }
   @media (min-width: 3000px) {
-    nav ul ul {
+    ul {
       top: 152%;
     }
   }
   @media (min-width: 3500px) {
-    nav ul ul {
+    ul {
       top: 151%;
     }
   }
@@ -201,11 +198,11 @@ const { data } = Astro.props;
       margin-left: -18%;
     }
   }
-  .book {
+  #book {
     margin-left: -25%;
   }
   @media (min-width: 768px) {
-    .book {
+    #book {
       margin-left: 0;
     }
   }

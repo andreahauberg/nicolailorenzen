@@ -12,9 +12,9 @@ const { data } = Astro.props;
         <a class="xlg_size" href="/book">Book</a>
       </li>
     </div>
-    <li class="work" id="workItem">
+    <li id="workItem">
       <div class="fold" id="foldContainer">
-        <a class="xlg_size" href="#">Work</a>
+        <a class="xlg_size" id="work" href="#">Work</a>
         <img class="icon" src="/fold_icon.svg" alt="folding icon" />
       </div>
       <ul>
@@ -92,7 +92,7 @@ const { data } = Astro.props;
   nav ul ul {
     display: none;
     position: absolute;
-    right: -47%;
+    right: -38%;
     top: 117%;
     border: solid var(--border-width) var(--primary-text);
   }
@@ -182,8 +182,17 @@ const { data } = Astro.props;
   a:hover {
     text-decoration: underline;
   }
+
+  #work {
+    margin-left: -8%;
+  }
+  @media (min-width: 768px) {
+    #work {
+      margin-left: -18%;
+    }
+  }
   .book {
-    margin-left: -40%;
+    margin-left: -25%;
   }
   @media (min-width: 768px) {
     .book {

@@ -1,0 +1,22 @@
+# _headers
+
+/*.jpg
+  Cache-Control: public, max-age=2592000
+
+/*.jpeg
+  Cache-Control: public, max-age=2592000
+
+/*.png
+  Cache-Control: public, max-age=2592000
+
+/*.gif
+  Cache-Control: public, max-age=2592000
+
+/*.js
+  Cache-Control: public, max-age=2592000
+
+/*.css
+  Cache-Control: public, max-age=2592000
+
+/*.webp
+  Cache-Control: public, max-age=2592000

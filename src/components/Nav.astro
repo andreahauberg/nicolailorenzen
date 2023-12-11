@@ -3,12 +3,12 @@ const { data } = Astro.props;
 ---
 
 <nav>
-  <div class="ul">
+  <div class="nav">
     <div class="grid">
       <a class="xlg_size" href="/about">About</a>
       <a id="book" class="xlg_size" href="/book">Book</a>
     </div>
-    <div class="li" id="workItem">
+    <div class="work_container" id="workItem">
       <div class="fold" id="foldContainer">
         <a class="xlg_size" id="work" href="#">Work</a>
         <img
@@ -76,7 +76,7 @@ const { data } = Astro.props;
     right: 0;
   }
   a,
-  .li {
+  .work_container {
     position: relative;
   }
 
@@ -84,7 +84,7 @@ const { data } = Astro.props;
     border: none;
   }
 
-  .ul {
+  .nav {
     list-style: none;
     display: flex;
     justify-content: space-evenly;

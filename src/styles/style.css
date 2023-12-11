@@ -93,6 +93,8 @@
   img {
     max-width: 100%;
     height: auto;
+    aspect-ratio: auto 640/360;
+
   }
 
   li {

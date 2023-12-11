@@ -8,8 +8,6 @@
     --lg-size: 1.4rem;
     --md-size: 1.25rem;
     --sm-size: 1.06rem;
-    --xsm-size: 0.93rem;
-    --xxsm-size: 0.75rem;
    --border-width: 2px;
 
 }
@@ -21,8 +19,6 @@
     --lg-size: 1.2rem;
     --md-size: 1.1rem;
     --sm-size: 1rem;
-    --xsm-size: 0.85rem;
-    --xxsm-size: 0.7rem;
   }
 }
 
@@ -46,8 +42,6 @@
         --lg-size: 1.6cqw;
         --md-size: 1.4cqw;
         --sm-size: 1.2cqw;
-        --xsm-size: 1cqw;
-        --xxsm-size: 0.9cqw;
         --border-radius:0.6rem;
         --border-width: 2.5px;
       }

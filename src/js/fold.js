@@ -1,11 +1,14 @@
 document.addEventListener("DOMContentLoaded", function () {
-    var workItem = document.getElementById("workItem");
-    var foldContainer = document.getElementById("foldContainer");
-    var submenu = workItem.querySelector("ul");
+  var workItem = document.querySelector("#workItem");
+  var foldContainer = document.querySelector("#foldContainer");
+  var submenu = workItem.querySelector("ul");
 
-    workItem.addEventListener("click", function () {
-      submenu.style.display =
-        submenu.style.display === "block" ? "none" : "block";
-      foldContainer.classList.toggle("clicked"); 
-    });
+  workItem.addEventListener("click", function () {
+    if (submenu.style.display === "block") {
+      submenu.style.display = "none";
+    } else {
+      submenu.style.display = "block";
+    }    
+    foldContainer.classList.toggle("clicked"); 
   });
+});

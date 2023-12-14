@@ -96,8 +96,11 @@ const { data } = Astro.props;
     display: none;
     position: absolute;
     right: -38%;
-    top: 117%;
-    border: solid var(--border-width) var(--primary-text);
+    top: 119%;
+    /* border: solid var(--border-width) var(--primary-text); */
+    border-bottom: solid var(--border-width) var(--primary-text);
+    border-left: solid var(--border-width) var(--primary-text);
+    border-right: solid var(--border-width) var(--primary-text);
   }
   @media (min-width: 450px) {
     ul {
@@ -107,34 +110,45 @@ const { data } = Astro.props;
   @media (min-width: 500px) {
     ul {
       right: -52%;
+      top: 124%;
     }
   }
   @media (min-width: 600px) {
     ul {
       right: -100%;
       width: 300%;
-      top: 124%;
+      top: 129%;
       text-align: center;
     }
   }
   @media (min-width: 800px) {
     ul {
-      top: 126%;
+      top: 130%;
     }
   }
   @media (min-width: 900px) {
     ul {
-      top: 129%;
+      top: 132%;
     }
   }
   @media (min-width: 1000px) {
     ul {
-      top: 132%;
+      top: 135%;
     }
   }
   @media (min-width: 1100px) {
     ul {
-      top: 134%;
+      top: 138%;
+    }
+  }
+  @media (min-width: 1200px) {
+    ul {
+      top: 141%;
+    }
+  }
+  @media (min-width: 1300px) {
+    ul {
+      top: 144%;
     }
   }
   @media (min-width: 1400px) {
@@ -142,14 +156,39 @@ const { data } = Astro.props;
       top: 146%;
     }
   }
-  @media (min-width: 1800px) {
+  @media (min-width: 1500px) {
+    ul {
+      top: 152%;
+    }
+  }
+  @media (min-width: 1600px) {
     ul {
       top: 150%;
     }
   }
+  @media (min-width: 1700px) {
+    ul {
+      top: 152%;
+    }
+  }
+  @media (min-width: 1800px) {
+    ul {
+      top: 154%;
+    }
+  }
+  @media (min-width: 1900px) {
+    ul {
+      top: 156%;
+    }
+  }
+  @media (min-width: 2000px) {
+    ul {
+      top: 158%;
+    }
+  }
   @media (min-width: 2200px) {
     ul {
-      top: 140%;
+      top: 146%;
     }
   }
   @media (min-width: 3000px) {
@@ -159,7 +198,7 @@ const { data } = Astro.props;
   }
   @media (min-width: 3500px) {
     ul {
-      top: 151%;
+      top: 156%;
     }
   }
   nav li:last-child a::after {

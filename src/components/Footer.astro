@@ -24,15 +24,20 @@
   footer {
     border-top: solid var(--border-width) var(--primary-text);
     border-bottom: solid var(--border-width) var(--primary-text);
+    padding: 5%;
   }
   #footer {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    margin: 5%;
+  }
+  @media (max-width: 768px) {
+    #footer {
+      grid-template-columns: 1fr;
+    }
   }
 
   a {
-    padding: 10px;
+    padding: 1rem;
     font-size: var(--sm-size);
     color: var(--secondary-text);
   }
@@ -41,6 +46,7 @@
     display: flex;
     justify-content: center;
     font-family: ViceCitySans;
+    padding-top: 1rem;
   }
   a:hover {
     text-decoration: underline;
